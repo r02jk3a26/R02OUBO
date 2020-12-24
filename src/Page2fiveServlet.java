@@ -17,14 +17,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Page1Servlet
  */
-@WebServlet("/page2")
-public class Page2Servlet extends HttpServlet {
+@WebServlet("/page2five")
+public class Page2fiveServlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Page2Servlet() {
+    public Page2fiveServlet() {
         super();
         // TODO Auto-generated constructor stub
     }

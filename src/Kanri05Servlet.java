@@ -1,6 +1,12 @@
 
 
 import java.io.IOException;
+import java.sql.Connection;
+import java.sql.Date;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
 
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
@@ -12,14 +18,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Page1Servlet
  */
-@WebServlet("/page1")
-public class Page1Servlet extends HttpServlet {
+@WebServlet("/kanri5")
+public class Kanri05Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Page1Servlet() {
+    public Kanri05Servlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,14 +34,8 @@ public class Page1Servlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String day = (String)request.getAttribute("day");
-		request.setAttribute("day",day);
-		String re = (String)request.getAttribute("re");
-		request.setAttribute("re",re);
-		String re2 = (String)request.getAttribute("re2");
-		request.setAttribute("re2",re2);
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/xmas.jsp");
-		rd.forward(request, response);
+			RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/kanri05.jsp");
+			rd.forward(request, response);
 	}
 
 }

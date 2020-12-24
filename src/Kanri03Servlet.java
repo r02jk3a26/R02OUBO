@@ -12,14 +12,14 @@ import javax.servlet.http.HttpServletResponse;
 /**
  * Servlet implementation class Page1Servlet
  */
-@WebServlet("/page1")
-public class Page1Servlet extends HttpServlet {
+@WebServlet("/kanri3")
+public class Kanri03Servlet extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public Page1Servlet() {
+    public Kanri03Servlet() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -28,14 +28,9 @@ public class Page1Servlet extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		String day = (String)request.getAttribute("day");
-		request.setAttribute("day",day);
-		String re = (String)request.getAttribute("re");
-		request.setAttribute("re",re);
-		String re2 = (String)request.getAttribute("re2");
-		request.setAttribute("re2",re2);
-		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/xmas.jsp");
+		RequestDispatcher rd = request.getRequestDispatcher("/WEB-INF/JSP/kanri03.jsp");
 		rd.forward(request, response);
+	
 	}
 
 }
